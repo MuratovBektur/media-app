@@ -14,7 +14,7 @@ async function getTodoList() {
 }
 async function check() {
   const res = await axios('http://192.168.0.106:4500');
-  alert(res.data);
+  alert(res.data.msg);
 }
 getTodoList();
 check();
