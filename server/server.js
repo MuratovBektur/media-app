@@ -4,7 +4,7 @@ const app = express();
 
 const isProd = process.env.NODE_ENV === "prod";
 
-const PORT = process.env.PORT ?? 3000;
+const PORT = process.env.PORT ?? 4500;
 
 app.use(cors());
 
