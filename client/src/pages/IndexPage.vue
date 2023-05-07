@@ -13,6 +13,7 @@ async function getTodoList() {
   todos.value = res.data;
 }
 async function check() {
+  console.log('in');
   const res = await axios('http://192.168.0.106:4500');
   alert(res.data.msg);
 }
