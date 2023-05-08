@@ -12,7 +12,7 @@
 import { useVideoStore } from 'stores/video-store';
 import { IVideo } from '../types';
 import { useRoute, useRouter } from 'vue-router';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 
 const videoStore = useVideoStore();
 const route = useRoute();
