@@ -148,7 +148,7 @@ module.exports = configure(function (/* ctx */) {
       // useFilenameHashes: true,
       extendGenerateSWOptions(cfg) {
         cfg.skipWaiting = false;
-        cfg.clientClaim = false;
+        cfg.clientsClaim = false;
       },
       // extendInjectManifestOptions (cfg) {},
       // extendManifestJson (json) {}
