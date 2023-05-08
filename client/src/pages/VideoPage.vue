@@ -1,6 +1,6 @@
 <template>
   <div class="video-page" v-if="video">
-    <video style="width: 100%" controls>
+    <video style="width: 100%" controls autoplay>
       <source :src="video.url" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -12,7 +12,7 @@
 import { useVideoStore } from 'stores/video-store';
 import { IVideo } from '../types';
 import { useRoute, useRouter } from 'vue-router';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const videoStore = useVideoStore();
 const route = useRoute();

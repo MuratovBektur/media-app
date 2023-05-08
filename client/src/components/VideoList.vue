@@ -9,7 +9,6 @@
 
 <script setup lang="ts">
 import { useVideoStore } from 'stores/video-store';
-import { EMovieType, IVideo } from '../types';
 import VideoItem from './VideoItem.vue';
 
 const videoStore = useVideoStore();
@@ -18,6 +17,9 @@ const videoList = videoStore.videoList;
 </script>
 
 <style lang="scss">
+$thirdElementWidth: 800px;
+$secondElementWidth: 600px;
+$firstElementWidth: 450px;
 .video-list {
   &__title {
     margin-bottom: 20px;
@@ -30,6 +32,37 @@ const videoList = videoStore.videoList;
     & > * {
       flex-shrink: 0;
       margin-right: 30px;
+      margin-bottom: 30px;
+      @media (max-width: 942px) and (min-width: $thirdElementWidth) {
+        width: 20%;
+        margin-right: 5%;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+      @media (max-width: $thirdElementWidth) and (min-width: $secondElementWidth) {
+        width: 30%;
+        margin-right: 5%;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+      @media (max-width: $secondElementWidth) and (min-width: $firstElementWidth) {
+        width: 45%;
+        margin-right: 0;
+        &:nth-child(odd) {
+          margin-right: 5%;
+        }
+      }
+      @media (max-width: $firstElementWidth) {
+        width: 100%;
+        // margin-right: 0;
+        // &:nth-child(odd) {
+        //   margin-right: 5%;
+        // }
+      }
+      //
+      //
     }
   }
 }

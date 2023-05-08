@@ -1,6 +1,6 @@
 <template>
   <div @click="goToLink" class="video-item">
-    <div>
+    <div class="video-item__img-container">
       <img class="video-item__img" :src="video.previewUrl" :alt="video.title" />
     </div>
     <div class="">{{ video.title }}</div>
@@ -29,7 +29,15 @@ function goToLink() {
 .video-item {
   cursor: pointer;
   &__img {
-    height: 280px;
+    width: 100%;
+    aspect-ratio: 7 / 10;
+    object-fit: cover;
+    @media (min-width: 942px) {
+      max-height: 280px;
+    }
+    &-container {
+      width: 100%;
+    }
   }
   &__content {
     display: flex;
