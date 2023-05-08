@@ -19,7 +19,7 @@ const videoList = videoStore.videoList;
 <style lang="scss">
 $thirdElementWidth: 800px;
 $secondElementWidth: 600px;
-$firstElementWidth: 400px;
+$firstElementWidth: 380px;
 .video-list {
   &__title {
     margin-bottom: 20px;
