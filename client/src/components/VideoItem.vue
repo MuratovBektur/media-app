@@ -28,8 +28,8 @@ function goToLink() {
 <style lang="scss">
 .video-item {
   cursor: pointer;
+  width: min-content;
   &__img {
-    width: 100%;
     aspect-ratio: 7 / 10;
     object-fit: cover;
     @media (min-width: 942px) {
