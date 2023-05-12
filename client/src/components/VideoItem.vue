@@ -35,6 +35,10 @@ function goToLink() {
     @media (min-width: 942px) {
       max-height: 280px;
     }
+    @media (max-width: 942px) {
+      max-width: 100%;
+      display: block;
+    }
     &-container {
       width: 100%;
     }
